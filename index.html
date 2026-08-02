@@ -1,58 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELEMENTAL RUN</title>
-  <meta name="description" content="Play ELEMENTAL RUN in your browser.">
-  <meta name="application-name" content="ELEMENTAL RUN">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ELEMENTAL RUN — First-Person Endless Runner</title>
+  <meta name="description" content="Play ELEMENTAL RUN, a first-person 3D endless runner. Dodge city traffic, master six elemental worlds, collect gold, and unlock upgrades.">
   <meta name="google-adsense-account" content="ca-pub-4666514897532022">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://shephhh.github.io/">
   <link rel="icon" href="/elemental-run-browser-v1.3/assets/elemental-run-icon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/elemental-run-browser-v1.3/assets/elemental-run-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="ELEMENTAL RUN">
-  <meta property="og:title" content="ELEMENTAL RUN">
-  <meta property="og:description" content="Play ELEMENTAL RUN in your browser.">
-  <meta property="og:url" content="https://shephhh.github.io/">
-  <meta property="og:image" content="https://shephhh.github.io/elemental-run-browser-v1.3/assets/elemental-run-icon.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ELEMENTAL RUN">
-  <meta name="twitter:description" content="Play ELEMENTAL RUN in your browser.">
-  <meta name="twitter:image" content="https://shephhh.github.io/elemental-run-browser-v1.3/assets/elemental-run-icon.png">
+  <link rel="stylesheet" href="/site.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4666514897532022" crossorigin="anonymous"></script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ELEMENTAL RUN",
-      "alternateName": "Elemental Run",
-      "url": "https://shephhh.github.io/"
-    }
-  </script>
-  <style>
-    html,
-    body,
-    iframe {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      border: 0;
-      overflow: hidden;
-      background: #020815;
-    }
-  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"ELEMENTAL RUN","genre":["Endless runner","Action","Racing"],"gamePlatform":"Web browser","description":"A first-person 3D endless runner across six elemental worlds.","url":"https://shephhh.github.io/"}</script>
 </head>
 <body>
-  <iframe
-    src="/elemental-run-browser-v1.3/"
-    title="ELEMENTAL RUN"
-    allow="autoplay; fullscreen; gamepad"
-    allowfullscreen
-  ></iframe>
-  <noscript>
-    <p><a href="/elemental-run-browser-v1.3/">Play ELEMENTAL RUN</a></p>
-  </noscript>
+  <header class="topbar"><a class="brand" href="/">ELEMENTAL <span>RUN</span></a><nav aria-label="Site"><a href="/guides.html">Guide</a><a href="/worlds.html">Worlds</a><a href="/updates.html">Updates</a></nav></header>
+  <main id="site-content">
+    <section class="hero">
+      <p class="eyebrow">FIRST-PERSON • 3D • ENDLESS RUNNER</p>
+      <h1>RUN THE <em>ELEMENTS.</em></h1>
+      <p class="lead">A fast first-person chase through neon traffic, floating sky bridges, lava fields, water routes, wild forests, and frozen roads.</p>
+      <button class="play" id="play-game" type="button">▶ PLAY ELEMENTAL RUN</button>
+      <p class="micro">Free in your browser · Keyboard, mouse, touch, and controller support</p>
+    </section>
+    <section class="stats" aria-label="Game features"><div><strong>6</strong><span>Elemental worlds</span></div><div><strong>FPS</strong><span>First-person action</span></div><div><strong>∞</strong><span>Every run is different</span></div></section>
+    <section class="content-grid">
+      <article><p class="eyebrow">THE RUN</p><h2>React before the road changes.</h2><p>Traffic, trains, barriers, falling hazards, and moving world events are placed differently every run. Move laterally, jump, slide, and choose the right moment to use your active ability.</p><a href="/guides.html">Read the player guide →</a></article>
+      <article><p class="eyebrow">PROGRESSION</p><h2>Build a better run.</h2><p>Collect gold while you run, complete daily missions, and invest in score, gold, jump, and ability upgrades. Your best score and progress stay on your device.</p><a href="/updates.html">See current features →</a></article>
+      <article><p class="eyebrow">WORLD ROUTE</p><h2>From city lights to snow.</h2><p>The route evolves from Cyber City into Sky, Nature, Lava, Water, and Snow. Each world changes the scenery, hazards, and rhythm of the road.</p><a href="/worlds.html">Explore all worlds →</a></article>
+    </section>
+  </main>
+  <section id="game-shell" hidden aria-label="ELEMENTAL RUN game"><button id="close-game" type="button" aria-label="Close game">×</button><iframe id="game-frame" title="ELEMENTAL RUN" allow="autoplay; fullscreen; gamepad" allowfullscreen></iframe></section>
+  <footer><span>© 2026 ELEMENTAL RUN</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="https://store.steampowered.com/app/4721080/ELEMENTAL_RUN/">Steam</a></footer>
+  <script>const shell=document.getElementById('game-shell'),frame=document.getElementById('game-frame');document.getElementById('play-game').onclick=()=>{frame.src='/elemental-run-browser-v1.3/';shell.hidden=false;document.body.classList.add('playing')};document.getElementById('close-game').onclick=()=>{shell.hidden=true;frame.src='';document.body.classList.remove('playing')};</script>
 </body>
 </html>
